@@ -1,10 +1,10 @@
 package github;
-
+//На главной странице GitHub выберите меню Solutions -> Enterprise с помощью команды hover для Solutions.
+// Убедитесь что загрузилась нужная страница (например что заголовок - "Build like the best."
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.text;
-
 import static com.codeborne.selenide.Selenide.open;
 
 public class HoverSolutions {
@@ -14,10 +14,6 @@ public class HoverSolutions {
         $(byText("Solutions")).hover();
         $(byText("Enterprise")).click();
         $(".logged-out").shouldHave(text("Build like the best"));
-
         sleep(5000);
-
-
-
     }
 }
