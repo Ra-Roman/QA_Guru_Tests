@@ -16,7 +16,8 @@ compileTestJava {
 dependencies {
     testImplementation(
             "com.codeborne:selenide:6.3.5",
-            "org.junit.jupiter:junit-jupiter:5.8.1"
+            "org.junit.jupiter:junit-jupiter:5.8.1",
+            "org.slf4j:slf4j-simple:1.7.36" //убирает ошибки SLF4J при запуске теста
             )
     //testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
