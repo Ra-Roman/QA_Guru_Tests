@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class HoverSolutions {
     @Test
-    void HoverTest(){
+    void hoverTest(){
         open("https://github.com");
         $(byText("Solutions")).hover();
         $(byText("Enterprise")).click();
