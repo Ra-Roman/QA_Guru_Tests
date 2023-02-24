@@ -1,5 +1,6 @@
 \.gradle
 \.idea
+\.gitattributes
 \build
 *.log
 *.class
