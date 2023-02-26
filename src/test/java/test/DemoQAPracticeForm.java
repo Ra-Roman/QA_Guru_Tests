@@ -10,15 +10,16 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class DemoQA_PracticeForm {
+public class DemoQAPracticeForm {
 
     @BeforeAll
-    static void beforeAll (){
+    static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
     }
+
     @Test
-    void practiceForm () {
+    void practiceForm() {
         String firstname = "Roman";
         String lastname = "Alexeev";
         String email = "alexeev@mail.ru";
@@ -50,8 +51,8 @@ public class DemoQA_PracticeForm {
         $("#submit").click();
         $(".modal-dialog").should(appear);
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(".modal-content").shouldHave(text(firstname),text(lastname),text(email),
-                text("Male"),text(number),text("30 March,1990"),text("Arts"),text("Music"),
-                text("1.png"),text(subject),text(address),text("Haryana"),text("Karnal"));
+        $(".modal-content").shouldHave(text(firstname), text(lastname), text(email),
+                text("Male"), text(number), text("30 March,1990"), text("Arts"), text("Music"),
+                text("1.png"), text(subject), text(address), text("Haryana"), text("Karnal"));
     }
 }

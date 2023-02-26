@@ -3,7 +3,6 @@ package test;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import pages.RegistrationPage;
-import pages.components.CalendarComponent;
 
 public class TestBase {
     RegistrationPage registrationPage = new RegistrationPage();

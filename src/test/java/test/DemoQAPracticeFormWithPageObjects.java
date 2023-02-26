@@ -2,15 +2,9 @@ package test;
 
 
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
-
-import static com.codeborne.selenide.Condition.appear;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
 
 
-public class DemoQA_PracticeFormWithPageObjects extends TestBase{
+public class DemoQAPracticeFormWithPageObjects extends TestBase{
 
     @Test
     void practiceForm () {

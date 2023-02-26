@@ -12,73 +12,87 @@ public class RegistrationPage {
     ModalkaComponents modalkaComponents = new ModalkaComponents();
 
     private final String titleText = "Student Registration Form";
-    public RegistrationPage openPage(){
+
+    public RegistrationPage openPage() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text(titleText));
         executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#fixedban').remove()");
         return this;
     }
-    public RegistrationPage setFirstName(String value){
+
+    public RegistrationPage setFirstName(String value) {
         $("#firstName").setValue(value);
         return this;
     }
-    public RegistrationPage setLastName(String value){
+
+    public RegistrationPage setLastName(String value) {
         $("#lastName").setValue(value);
         return this;
     }
-    public RegistrationPage setEmail(String value){
+
+    public RegistrationPage setEmail(String value) {
         $("#userEmail").setValue(value);
         return this;
     }
-    public RegistrationPage setGender(String value){
+
+    public RegistrationPage setGender(String value) {
         $("#genterWrapper").$(byText(value)).click();
         return this;
     }
-    public RegistrationPage setNumber(String value){
+
+    public RegistrationPage setNumber(String value) {
         $("#userNumber").setValue(value);
         return this;
     }
-    public RegistrationPage setBirthDay(String day, String month, String year){
-        calendarComponent.setDate( day,  month,  year);
+
+    public RegistrationPage setBirthDay(String day, String month, String year) {
+        calendarComponent.setDate(day, month, year);
         return this;
     }
-    public RegistrationPage setSubject(String value){
+
+    public RegistrationPage setSubject(String value) {
         $("#subjectsInput").setValue(value).pressEnter();
         return this;
     }
-    public RegistrationPage setHobbie(String value){
+
+    public RegistrationPage setHobbie(String value) {
         $("#hobbiesWrapper").$(byText(value)).click();
         return this;
     }
-    public RegistrationPage setImg(String value){
+
+    public RegistrationPage setImg(String value) {
         $("#uploadPicture").uploadFromClasspath(value);
         return this;
     }
-    public RegistrationPage setCurrentAddress(String value){
+
+    public RegistrationPage setCurrentAddress(String value) {
         $("#currentAddress").setValue(value);
         return this;
     }
-    public RegistrationPage setStateCity(String state, String city){
+
+    public RegistrationPage setStateCity(String state, String city) {
         $("#state").click();
         $(byText(state)).click();
         $("#city").click();
         $(byText(city)).click();
         return this;
     }
-    public RegistrationPage setClickSubmit(){
+
+    public RegistrationPage setClickSubmit() {
         $("#submit").click();
         return this;
     }
-    public RegistrationPage setModalka(){
+
+    public RegistrationPage setModalka() {
         modalkaComponents.openModalka();
         return this;
     }
-    public RegistrationPage setResultModalka (String key, String value){
+
+    public RegistrationPage setResultModalka(String key, String value) {
         modalkaComponents.verifyResults(key, value);
-
-
         return this;
-        }
+    }
 
 
 }
