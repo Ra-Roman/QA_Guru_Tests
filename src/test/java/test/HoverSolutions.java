@@ -1,4 +1,4 @@
-package github;
+package test;
 //На главной странице GitHub выберите меню Solutions -> Enterprise с помощью команды hover для Solutions.
 // Убедитесь что загрузилась нужная страница (например что заголовок - "Build like the best."
 import org.junit.jupiter.api.Test;
