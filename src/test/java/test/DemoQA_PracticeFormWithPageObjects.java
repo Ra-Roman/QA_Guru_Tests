@@ -53,5 +53,6 @@ public class DemoQA_PracticeFormWithPageObjects extends TestBase{
                 .setResultModalka("Picture", imgName)
                 .setResultModalka("Address", address)
                 .setResultModalka("State and City", state + " " + city);
+
     }
 }
